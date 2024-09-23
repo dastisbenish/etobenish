@@ -1,1 +1,33 @@
+price=round(float(input()), 2)
+new_price=0
+if price >20:
+    new_price=(0.65 * price)
+    print("itogo", round(new_price, 2), "vasha ckidka", round((price - new_price), 2))
+else:
+    print("malo")
+# 2 занятие, 2 задание
 
+# 2 занятие, 1 задание
+a=float(input())
+b=float(input())
+if b == 0:
+    print("div. by zero")
+else:
+    print(a/b)
+
+
+# 2 занятие, 3 задание
+a=int(input())
+month=["jan", "fb", "mar", "apr","may", "jun", "jul", "aug", "sp", "oct", "nov", "dec"]
+if a > 2 and a < 6 :
+    print("spring")
+if a > 5 and a < 9 :
+    print("summer")
+if a > 8 and a < 12 :
+    print("fall")
+if a == 1 or a == 2 or a == 12:
+    print("winter")
+if (a<1) or (a>12):
+    print("??norm??")
+if (a>=1) and (a<=12):
+    print(month[a-1])
