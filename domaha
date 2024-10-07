@@ -53,3 +53,17 @@ k=len(l)-1
 while k>-1:
     print(l[k])
     k=k-1
+
+
+#4 занятие, 1 задание дз
+s = "змееногий ниггер несется оченнь быстренннько"
+a = s.replace("н", "!")
+string=s
+string_vp= ""
+for i in range(len(s)):
+    if s[i]== 'н':
+        string_vp = string_vp + s[i]
+    elif s[i]!= 'н':
+        string_vp = string_vp + " "
+print(string_vp)
+print(a)
