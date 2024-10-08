@@ -67,3 +67,44 @@ for i in range(len(s)):
         string_vp = string_vp + " "
 print(string_vp)
 print(a)
+
+#5 заянтие 2
+#Найти все простые натуральные числа, не превосходящие n, двоичная запись которых представляет собой палиндром, т. е. читается одинаково слева направо и справа налево.
+n=int(input())
+nn=n
+dvo=0
+l=[]
+l1=[]
+def prostata(n):
+    global cnt
+    global k
+    cnt=0
+    k=2
+    while k*k <= n:
+        if n%k == 0:
+            cnt+=1
+        k+=1
+        return n, cnt
+while n !=0:
+    n=n-1
+    prostata(n)
+    if cnt==0:
+        l.append(bin(n)[2:])
+prostata(nn)
+if cnt==0:
+    l.append(bin(nn)[2:])
+l.remove("0")
+l.remove("1")
+#я вор
+s = l[0]
+flag = True
+string  = ''
+for i in range (len(s)):
+  if s[i]!= ' ':
+    string +=s[i]
+print(string)
+for i in range(len(s)//2):
+  if string[i] != string[-1-i]:
+    flag = False
+    break
+print('Палиндром') if flag else print('Не палиндром')
