@@ -1,12 +1,8 @@
-# 2 занятие, 3 задание
-a=int(input())month=["jan", "fb", "mar", "apr","may", "jun", "jul", "aug", "sp", "oct", "nov", "dec"]
-if a > 2 and a < 6 :    print("spring")
-if a > 5 and a < 9 :    print("summer")
-if a > 8 and a < 12 :    print("fall")
-if a == 1 or a == 2 or a == 12:    print("winter")
-if (a<1) or (a>12):    print("??norm??")
-if (a>=1) and (a<=12):
-    print(month[a-1])
+#3 занятие, 3 задание дз
+l = [1, 2, 3, 4, 5 ,6]k=len(l)-1
+while k>-1:
+    print(l[k])    k=k-1
+
 #3 занятие, 2 задание дз
 for i in range(9):
     print("1", "*", str(i+1), "=", (i+1)*1,"|" "2", "*", str(i+1), "=", (i+1)*2, "|" "3", "*", str(i+1), "=", (i+1)*3, "|" "4", "*", str(i+1), "=", (i+1)*4, "|" "5", "*", str(i+1), "=", (i+1)*5, "|" "6", "*", str(i+1), "=", (i+1)*6,"|" "7", "*", str(i+1), "=", (i+1)*7, "|" "8", "*", str(i+1), "=", (i+1)*8, "|" "9", "*", str(i+1), "=", (i+1)*9)
