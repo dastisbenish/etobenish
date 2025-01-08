@@ -1,0 +1,37 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import fsolve
+
+# Define the functions
+def f1(x):
+  return x**3 - x
+
+def f2(x):
+  return 2*x - 1
+
+# Define the difference function to find the intersection points
+def diff(x):
+  return f1(x) - f2(x)
+
+# Find the intersection points using fsolve
+x_roots = fsolve(diff, [-2, 0, 2]) # Three initial guesses for the roots
+y_roots = f1(x_roots)
+
+# Plot the functions
+x = np.linspace(-3, 3, 100)
+plt.plot(x, f1(x), label="y1 = x³ - x")
+plt.plot(x, f2(x), label="y2 = 2x - 1")
+
+# Plot the intersection points
+plt.scatter(x_roots, y_roots, color="red", label="точки пересечения")
+
+# Set the title and labels
+plt.title("Пересечение y1 = x³ - x и y2 = 2x - 1")
+plt.xlabel("x")
+plt.ylabel("y")
+
+# Add a legend
+plt.legend()
+
+# Show the plot
+plt.show()
